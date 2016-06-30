@@ -1,0 +1,16 @@
+{
+  "name": "websocket",
+  "version": "1.0.0",
+  "description": "trabalho de redes",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "redes"
+  ],
+  "author": "leonardo rangel",
+  "license": "ISC",
+  "dependencies": {}
+}

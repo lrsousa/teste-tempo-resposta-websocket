@@ -1,0 +1,21 @@
+<ul id='minhaLista'>
+
+</ul>
+
+<script src="http://187.107.44.142:8080/socket.io/socket.io.js"></script>
+<script>
+  var socket = io('http://187.107.44.142:8080');
+  var lista = document.getElementById('minhaLista');
+  
+  socket.on('resposta', function (data) {
+  	var linha = document.createElement('LI');
+  	var conteudo = document.createTextNode(data + ' - ' + new Date().toISOString());
+  	linha.appendChild(conteudo);
+  	lista.appendChild(linha);
+    //console.log(data + ' - ' + new Date().toISOString());
+  });
+
+  for(i = 0; i < 3000; i++) {
+  	socket.emit('message', new Date());
+  };
+</script>
